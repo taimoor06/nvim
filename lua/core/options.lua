@@ -29,8 +29,8 @@ vim.opt.autowrite = true
 vim.opt.autoread = true
 vim.opt.hlsearch = true
 vim.o.termguicolors = false
-vim.o.background = "light"
-vim.o.cursorline = false
+vim.o.background = "dark"
+vim.o.cursorline = true
 
 vim.cmd("colorscheme vim")
 vim.cmd("let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}")
