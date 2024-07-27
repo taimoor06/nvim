@@ -28,11 +28,11 @@ vim.opt.showcmd = true
 vim.opt.autowrite = true
 vim.opt.autoread = true
 vim.opt.hlsearch = true
-vim.o.termguicolors = false
+vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.o.cursorline = true
+vim.o.cursorline = false
 
-vim.cmd("colorscheme vim")
+--vim.cmd("colorscheme gruvbox")
 vim.cmd("let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}")
 vim.cmd("let g:vimwiki_list = [{'path': '~/.local/share/nvim/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]")
 
