@@ -89,12 +89,17 @@ return {
 
 		end
 	},
+	-- {
+	-- 	"saadparwaiz1/cmp_luasnip",
+	-- 	event = "InsertEnter"
+	-- },
+	-- {
+	-- 	"rafamadriz/friendly-snippets",
+	-- 	event = "InsertEnter"
+	-- },
 	{
-		"saadparwaiz1/cmp_luasnip",
-		event = "InsertEnter"
-	},
-	{
-		"rafamadriz/friendly-snippets",
-		event = "InsertEnter"
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		config = true
 	},
 }

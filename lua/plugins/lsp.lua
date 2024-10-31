@@ -57,38 +57,21 @@ return {
                 },
             }
 
-            lspconfig.clangd.setup {
-                on_attach = on_attach,
-                capabilities = capabilities,
-                cmd = {
-                    "clangd",
-                    "--background-index",
-                    "--clang-tidy",
-                    "--header-insertion=never"
-                }
-            }
+            -- lspconfig.clangd.setup {
+            --     on_attach = on_attach,
+            --     capabilities = capabilities,
+            --     cmd = {
+            --         "clangd",
+            --         "--background-index",
+            --         "--clang-tidy",
+            --         "--header-insertion=never"
+            --     }
+            -- }
 
-            lspconfig.cmake.setup {
-                on_attach = on_attach,
-                capabilities = capabilities
-            }
-
-            lspconfig.bashls.setup {
+            lspconfig.gopls.setup {
                 on_attach = on_attach,
                 capabilities = capabilities
             }
-
-            lspconfig.marksman.setup {
-                on_attach = on_attach,
-                capabilities = capabilities
-            }
-
-            lspconfig.rust_analyzer.setup {
-                on_attach = on_attach,
-                capabilities = capabilities
-            }
-
-
         end
     }
 }
