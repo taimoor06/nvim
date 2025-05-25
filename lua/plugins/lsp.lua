@@ -1,21 +1,9 @@
 return {
     {
-        "williamboman/mason.nvim",
-        event = { "BufReadPre", "BufNewFile" },
-        config = true
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        event = { "BufReadPre", "BufNewFile" },
-        opts = {
-            ensure_installed = { "lua_ls" }
-        }
-    },
-    {
         "neovim/nvim-lspconfig",
         event = { "BufReadPre", "BufNewFile" },
         config = function()
-            local on_attach = function(_, buf)
+            local on_attach = function()
                 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
                 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
@@ -25,12 +13,12 @@ return {
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             end
 
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
             local lspconfig = require("lspconfig")
 
-			lspconfig.lua_ls.setup {
-				on_attach = on_attach,
-				capabilities = capabilities,
+            lspconfig.lua_ls.setup {
+                on_attach = on_attach,
+                capabilities = capabilities,
                 settings = {
                     Lua = {
                         runtime = {
@@ -49,7 +37,6 @@ return {
                             -- Make the server aware of Neovim runtime files
                             library = vim.api.nvim_get_runtime_file("", true),
                         },
-                        -- Do not send telemetry data containing a randomized but unique identifier
                         telemetry = {
                             enable = false,
                         },
@@ -57,16 +44,16 @@ return {
                 },
             }
 
-            -- lspconfig.clangd.setup {
-            --     on_attach = on_attach,
-            --     capabilities = capabilities,
-            --     cmd = {
-            --         "clangd",
-            --         "--background-index",
-            --         "--clang-tidy",
-            --         "--header-insertion=never"
-            --     }
-            -- }
+            lspconfig.clangd.setup {
+                on_attach = on_attach,
+                capabilities = capabilities,
+                cmd = {
+                    "clangd",
+                    "--background-index",
+                    "--clang-tidy",
+                    "--header-insertion=never"
+                }
+            }
 
             lspconfig.gopls.setup {
                 on_attach = on_attach,
