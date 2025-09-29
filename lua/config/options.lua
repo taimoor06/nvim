@@ -29,14 +29,9 @@ vim.o.softtabstop = 4
 vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.smartindent = true
--- vim.opt.colorcolumn = "80"
 vim.o.cursorline = false
 
 vim.g.netrw_banner = 0
--- vim.opt.guicursor = "n:block-Cursor"
-
-vim.opt.rtp:append("~/.config/nvim/colors/gruvbox.nvim")
-vim.cmd("colorscheme gruvbox")
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
