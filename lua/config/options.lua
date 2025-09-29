@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.cmd("filetype plugin on")
-
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.syntax = 'enable'
 vim.opt.path:append('**')
@@ -21,6 +19,7 @@ vim.opt.showcmd = true
 vim.opt.autowrite = true
 vim.opt.autoread = true
 vim.opt.hlsearch = true
+vim.opt.laststatus = 3
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
@@ -30,7 +29,7 @@ vim.o.softtabstop = 4
 vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.smartindent = true
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 vim.o.cursorline = false
 
 vim.g.netrw_banner = 0
