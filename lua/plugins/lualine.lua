@@ -1,13 +1,12 @@
 return {
     'nvim-lualine/lualine.nvim',
     event = "VeryLazy",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
 
     config = function()
         require('lualine').setup{
             options = {
                 icons_enabled = false,
-                theme = 'gruvbox-material',
+                theme = 'gruvbox',
                 component_separators = { left = '', right = ''},
                 section_separators = { left = '', right = ''},
             },
