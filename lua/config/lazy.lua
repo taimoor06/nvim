@@ -17,55 +17,55 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-spec = {
-	-- import your plugins
-	{ import = "plugins" },
-},
--- automatically check for plugin updates
-checker = { 
-	enabled = true,
-	notify = false
-},
-change_detection = {
-	notify = false
-},
-ui = {
-	icons = {
-		ft = "",
-		lazy = "󰂠 ",
-		loaded = "",
-		not_loaded = "",},
-},
-      performance = {
-rtp = {
-  disabled_plugins = {
-    "2html_plugin",
-    "tohtml",
-    "getscript",
-    "getscriptPlugin",
-    "gzip",
-    "logipat",
-    "matchit",
-    "tar",
-    "tarPlugin",
-    "rrhelper",
-    "syntax",
-    "spellfile_plugin",
-    "vimball",
-    "vimballPlugin",
-    "zip",
-    "zipPlugin",
-    "rplugin",
-    "synmenu",
-    "optwin",
-    "compiler",
-    "spellfile",
-    "syntax",
-    "rplugins",
-    "bugreport",
-    "ftplugin",
-    "spell",
+  spec = {
+    -- import your plugins
+    { import = "plugins" },
   },
-},
+  -- automatically check for plugin updates
+  checker = { 
+    enabled = true,
+    notify = false
+  },
+  change_detection = {
+    notify = false
+  },
+  ui = {
+    icons = {
+      ft = "",
+      lazy = "󰂠 ",
+      loaded = "",
+      not_loaded = "",},
+    },
+    performance = {
+      rtp = {
+        disabled_plugins = {
+          "2html_plugin",
+          "tohtml",
+          "getscript",
+          "getscriptPlugin",
+          "gzip",
+          "logipat",
+          "matchit",
+          "tar",
+          "tarPlugin",
+          "rrhelper",
+          "syntax",
+          "spellfile_plugin",
+          "vimball",
+          "vimballPlugin",
+          "zip",
+          "zipPlugin",
+          "rplugin",
+          "synmenu",
+          "optwin",
+          "compiler",
+          "spellfile",
+          "syntax",
+          "rplugins",
+          "bugreport",
+          "ftplugin",
+          "spell",
+        },
       },
-})
+    },
+  })
